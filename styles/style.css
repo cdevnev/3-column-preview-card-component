@@ -102,7 +102,7 @@ button {
     color: var(--ParentBG);
     font: var(--FontP);
     border-radius: 60px;
-    margin: 1em auto 1em;
+    margin: 1.5em auto 0;
     padding: .75em 2em;
     border: none;
 }
