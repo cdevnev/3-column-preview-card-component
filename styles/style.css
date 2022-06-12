@@ -37,3 +37,39 @@ Font size: 15px
     padding: 0;
     box-sizing: border-box;
 }
+
+body, html {
+    height: 100%;
+}
+
+img {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-stack {
+    border-radius: 8px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.card1 {
+    background-color: var(--primaryOrange);
+}
+
+.card2 {
+    background-color: var(--primaryCyan);
+}
+
+.card3 {
+    background-color: var(--primaryDarkCyan);
+}
