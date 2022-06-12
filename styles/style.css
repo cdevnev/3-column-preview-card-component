@@ -104,5 +104,11 @@ button {
     border-radius: 60px;
     margin: 1.5em auto 0;
     padding: .75em 2em;
-    border: none;
+    border: 2px solid var(--Gray);
+}
+
+button:hover {
+    background-color: var(--ParentBG);
+    color: var(--Gray);
+    cursor: pointer;
 }
