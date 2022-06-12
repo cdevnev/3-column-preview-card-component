@@ -25,11 +25,14 @@ Font size: 15px
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
 
 :root {
-    --primaryOrange: hsl(31, 77%, 52%);
-    --primaryCyan: hsl(184, 100%, 22%);
-    --primaryDarkCyan: hsl(179, 100%, 13%);
-    --neutral100: hsla(0, 0%, 100%, 0.75);
-    --neutral200: hsl(0, 0%, 95%);
+    --Orange: hsl(31, 77%, 52%);
+    --Cyan: hsl(184, 100%, 22%);
+    --DarkCyan: hsl(179, 100%, 13%);
+    --White: hsla(0, 0%, 100%, 0.75);
+    --Gray: hsl(0, 0%, 95%);
+
+    --FontH: 2.5rem 'Big Shoulders Display', cursive;
+    --FontP: 0.9375rem/1.7 'Lexend Deca', sans-serif;
 }
 
 * {
@@ -48,28 +51,58 @@ img {
     height: 100%;
 }
 
+h1 {
+    font: var(--FontH);
+    color: var(--Gray);
+    margin: .75em auto;
+    text-transform: uppercase;
+}
+
+p {
+    font: var(--FontP);
+    color: var(--White);
+}
+
 .container {
-    height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    margin: 20% auto;
 }
 
 .card-stack {
-    border-radius: 8px;
-    width: 80%;
-    overflow: hidden;
+    width: 20em;
+}
+
+.card {
+    padding: 3em;
+    color: var(--White);
 }
 
 .card1 {
-    background-color: var(--primaryOrange);
+    --ParentBG: var(--Orange);
+    background-color: var(--ParentBG);
+    border-radius: 8px 8px 0 0;
 }
 
 .card2 {
-    background-color: var(--primaryCyan);
+    --ParentBG: var(--Cyan);
+    background-color: var(--ParentBG);
 }
 
 .card3 {
-    background-color: var(--primaryDarkCyan);
+    --ParentBG: var(--DarkCyan);
+    background-color: var(--ParentBG);
+    border-radius: 0 0 8px 8px;
+}
+
+button {
+    background-color: var(--Gray);
+    color: var(--ParentBG);
+    font: var(--FontP);
+    border-radius: 60px;
+    margin: 1em auto 1em;
+    padding: .75em 2em;
+    border: none;
 }
