@@ -47,43 +47,49 @@ body, html {
 
 img {
     display: block;
-    width: auto;
-    height: 100%;
 }
 
 h1 {
     font: var(--FontH);
     color: var(--Gray);
-    margin: .75em auto;
+    margin-top: .75em;
     text-transform: uppercase;
 }
 
 p {
     font: var(--FontP);
     color: var(--White);
+    margin-top: auto;
 }
 
 .container {
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    margin: 20% auto;
+    margin: 0 auto;
 }
 
 .card-stack {
-    width: 20em;
+    margin: 20%;
+    min-width: 20em;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .card {
     padding: 3em;
+    height: 27.62em;
+    width: 20em;
     color: var(--White);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .card1 {
     --ParentBG: var(--Orange);
     background-color: var(--ParentBG);
-    border-radius: 8px 8px 0 0;
 }
 
 .card2 {
@@ -94,7 +100,6 @@ p {
 .card3 {
     --ParentBG: var(--DarkCyan);
     background-color: var(--ParentBG);
-    border-radius: 0 0 8px 8px;
 }
 
 button {
@@ -102,13 +107,32 @@ button {
     color: var(--ParentBG);
     font: var(--FontP);
     border-radius: 60px;
-    margin: 1.5em auto 0;
-    padding: .75em 2em;
+    height: 3.2em;
+    width: 9em;
     border: 2px solid var(--Gray);
+    margin-top: auto;
+
 }
 
 button:hover {
     background-color: var(--ParentBG);
     color: var(--Gray);
     cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+            height: 100%;
+            margin: 0 auto;
+    }
+    .card-stack {
+            width: 60em;
+            min-height: 31.25em;
+            display: grid;
+            grid-template: 100% / 20em 20em 20em;
+            overflow: hidden;
+            }    
+    p {
+        margin: -.5em auto;
+    }
 }
