@@ -66,20 +66,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    padding: 5.5em;
 }
 
 .card-stack {
-    margin: 20%;
-    min-width: 20em;
+    min-width: 20.375em;
     border-radius: 8px;
     overflow: hidden;
 }
 
 .card {
     padding: 3em;
-    height: 27.62em;
-    width: 20em;
+    min-height: 27.62em;
+    max-width: 20.375em;
     color: var(--White);
     display: flex;
     flex-flow: column nowrap;
@@ -121,18 +120,14 @@ button:hover {
 }
 
 @media only screen and (min-width: 1200px) {
-    .container {
+        .container {
             height: 100%;
-            margin: 0 auto;
-    }
-    .card-stack {
-            width: 60em;
+        }
+        .card-stack {
+            max-width: 57.5em;
             min-height: 31.25em;
             display: grid;
-            grid-template: 100% / 20em 20em 20em;
-            overflow: hidden;
-            }    
-    p {
-        margin: -.5em auto;
-    }
+            grid-template: 1fr / 1fr 1fr 1fr;
+        }    
+        p {margin-top: 2.5em;}
 }
