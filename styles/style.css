@@ -43,6 +43,7 @@ Font size: 15px
 
 body, html {
     height: 100%;
+    background-color: var(--Gray);
 }
 
 img {
